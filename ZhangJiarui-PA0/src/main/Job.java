@@ -5,7 +5,7 @@ package main;
 * Each job contains a person and their target floor, allowing the elevator to process their request.
 * Known Bugs: None
 *
-* Jiarui Zhang
+* @author Jiarui Zhang
 * jiaruiz@brandeis.edu
 * 01 19 2025
 * COSI 21A PA0

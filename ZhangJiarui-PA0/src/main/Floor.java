@@ -5,7 +5,7 @@ package main;
 * Manages the people present on the floor and provides functionality to add individuals to the floor.
 * Known Bugs: None
 *
-* Jiarui Zhang
+* @author Jiarui Zhang
 * jiaruiz@brandeis.edu
 * 01 19 2025
 * COSI 21A PA0
@@ -16,6 +16,10 @@ public class Floor{
 
     public Floor(/*add some params here maybe */){
         peopleAtFloor = new MyArray<Person>();
+    }
+
+    public MyArray<Person> getPeopleAtFloor(){
+        return this.peopleAtFloor;
     }
 
     public void enterFloor(Person person){

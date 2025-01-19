@@ -6,7 +6,7 @@ package main;
 * and manages elevator operations.
 * Known Bugs: None
 *
-* Jiarui Zhang
+* @author Jiarui Zhang
 * jiaruiz@brandeis.edu
 * 01 19 2025
 * COSI 21A PA0
@@ -15,12 +15,24 @@ package main;
 public class Simulation {
     public static void main(String[] args){
 
+        Building building = new Building(3);
+
         Person p1 = new Person("Sam", "Altman");
         Person p2 = new Person("Elon", "Musk");
         Person p3 = new Person("Bill", "Gates");
         Person p4 = new Person("Jun", "Lei");
+        Person p5 = new Person("Steve", "Jobs");
+        Person p6 = new Person("Jeff", "Bezos");
 
-        Building building = new Building(3);
+        p5.enterBuilding(building, 2);
+        p6.enterBuilding(building, 3);
+        building.enterElevatorRequest(p5, 2);
+        building.enterElevatorRequest(p6, 3);
+
+        System.out.println("Sample Output 1: ");
+        building.startElevator();
+        System.out.println("Sample Output 1 ends.\n");
+
 
         p1.enterBuilding(building, 2);
         p2.enterBuilding(building, 3);
@@ -31,11 +43,9 @@ public class Simulation {
         building.enterElevatorRequest(p3, 3);
         building.enterElevatorRequest(p4, 2);
         
+        System.out.println("Sample Output 2: ");
         building.startElevator();
-
-        // for(int i = 1; i <= building.getMaxFloorNum(); i++){
-        //     System.out.println(building.getFloors()[i].toString());
-        // }
+        System.out.println("Sample Output 2 ends.");
 
     }
 }

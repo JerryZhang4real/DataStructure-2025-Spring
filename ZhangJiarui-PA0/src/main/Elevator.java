@@ -6,7 +6,7 @@ package main;
 * while maintaining a maximum occupancy limit.
 * Known Bugs: None
 *
-* Jiarui Zhang
+* @author Jiarui Zhang
 * jiaruiz@brandeis.edu
 * 01 19 2025
 * COSI 21A PA0
@@ -45,6 +45,10 @@ public class Elevator {
                 i = -1;
             }
         }
+
+        this.location = 0;
+        this.jobIndex = 0;
+        this.jobs.clear();
     }
 
     public void processJob(Job job){

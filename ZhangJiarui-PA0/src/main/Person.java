@@ -6,7 +6,7 @@ package main;
 * Provides functionality for entering a building and retrieving location details.
 * Known Bugs: None
 *
-* Jiarui Zhang
+* @author Jiarui Zhang
 * jiaruiz@brandeis.edu
 * 01 19 2025
 * COSI 21A PA0
@@ -36,6 +36,10 @@ public class Person {
 
     public String getName(){
         return this.firstName + " " + this.lastName;
+    }
+
+    public void setAtFloor(int floor){
+        this.atFloor = floor;
     }
 
     public int getToFloor(){

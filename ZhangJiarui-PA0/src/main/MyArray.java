@@ -6,7 +6,7 @@ package main;
 * along with dynamic resizing to accommodate more elements when needed.
 * Known Bugs: None
 *
-* Jiarui Zhang
+* @author Jiarui Zhang
 * jiaruiz@brandeis.edu
 * 01 19 2025
 * COSI 21A PA0
@@ -52,6 +52,11 @@ public class MyArray<T> {
         array[--size] = null;
 
         return removedElement;
+    }
+
+    public void clear() {
+        array = (T[]) new Object[array.length]; // Reset to a new array of the same capacity
+        size = 0; // Reset the size to 0
     }
 
     public int size(){

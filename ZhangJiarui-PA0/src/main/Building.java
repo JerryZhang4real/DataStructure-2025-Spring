@@ -6,7 +6,7 @@ package main;
 * Also supports tracking people at each floor.
 * Known Bugs: None
 *
-* Jiarui Zhang
+* @author Jiarui Zhang
 * jiaruiz@brandeis.edu
 * 01 19 2025
 * COSI 21A PA0
@@ -54,7 +54,8 @@ public class Building {
     }
 
     public void enterFloor(Person person, int floor){
-        floorArr[floor].enterFloor(person);;
+        floorArr[floor].enterFloor(person);
+        person.setAtFloor(floor);
     }
 
     public String toString(){
