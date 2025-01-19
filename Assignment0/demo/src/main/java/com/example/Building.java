@@ -1,5 +1,17 @@
 package com.example;
 
+/**
+* Represents a building with multiple floors and an elevator. 
+* Allows people to request the elevator and move to specific floors.
+* Also supports tracking people at each floor.
+* Known Bugs: None
+*
+* Jiarui Zhang
+* jiaruiz@brandeis.edu
+* 01 19 2025
+* COSI 21A PA0
+*/
+
 public class Building {
 
     private Floor[] floorArr;

@@ -1,5 +1,17 @@
 package com.example;
 
+/**
+* Represents a person who interacts with a building and its elevator system. 
+* Tracks the person's name, current floor, destination floor, and location status.
+* Provides functionality for entering a building and retrieving location details.
+* Known Bugs: None
+*
+* Jiarui Zhang
+* jiaruiz@brandeis.edu
+* 01 19 2025
+* COSI 21A PA0
+*/
+
 public class Person {
     private String firstName;
     private String lastName;

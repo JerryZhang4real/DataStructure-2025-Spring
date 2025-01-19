@@ -1,5 +1,17 @@
 package com.example;
 
+/**
+* Simulates an elevator system within a building. 
+* The elevator processes job requests to transport people between floors 
+* while maintaining a maximum occupancy limit.
+* Known Bugs: None
+*
+* Jiarui Zhang
+* jiaruiz@brandeis.edu
+* 01 19 2025
+* COSI 21A PA0
+*/
+
 public class Elevator {
 
     private static int maxOccupants = 3;

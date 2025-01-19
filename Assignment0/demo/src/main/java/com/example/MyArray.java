@@ -1,5 +1,17 @@
 package com.example;
 
+/**
+* A generic resizable array implementation. 
+* Provides basic functionalities such as adding, removing, and accessing elements, 
+* along with dynamic resizing to accommodate more elements when needed.
+* Known Bugs: None
+*
+* Jiarui Zhang
+* jiaruiz@brandeis.edu
+* 01 19 2025
+* COSI 21A PA0
+*/
+
 public class MyArray<T> {
     private T[] array;
     private int size;

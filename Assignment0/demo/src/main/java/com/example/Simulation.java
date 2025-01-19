@@ -1,5 +1,17 @@
 package com.example;
 
+/**
+* Simulates the interaction between people and an elevator system in a building. 
+* Creates a building, adds people with destination floors, processes elevator requests, 
+* and manages elevator operations.
+* Known Bugs: None
+*
+* Jiarui Zhang
+* jiaruiz@brandeis.edu
+* 01 19 2025
+* COSI 21A PA0
+*/
+
 public class Simulation {
     public static void main(String[] args){
 
