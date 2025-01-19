@@ -35,6 +35,8 @@ public class Elevator {
         for(int i = 0; i < jobs.size(); i++){
             processJob(jobs.get(i));
 
+            //if everyone in the elevator has exited, their corresponding jobs
+            //will be removed from the job array, so the index here must be reset.
             if(i == maxOccupants-1){
                 i = -1;
             }
@@ -42,10 +44,9 @@ public class Elevator {
     }
 
     public void processJob(Job job){
-        //System.out.println("Elevator at floor " + location);
 
         int nextFloor = job.getToFloor();
-        if(location > nextFloor){
+        if(location > nextFloor){ //going down
             for(int i = location; i >= nextFloor; i--){
                 if(i == 0){
                     location = 0;
@@ -55,7 +56,7 @@ public class Elevator {
                     System.out.println(Constants.ELEVATOR_AT_FLOOR + i);
                 }
             }
-        }else if(location < nextFloor){
+        }else if(location < nextFloor){ //going up
             for(int i = location; i <=nextFloor; i++){
                 if(i == 0){
                     location = 0;
@@ -65,7 +66,7 @@ public class Elevator {
                     System.out.println(Constants.ELEVATOR_AT_FLOOR + i);
                 }
             }
-        }else{
+        }else{ //same floor
             if(location == 0){
                 System.out.println(Constants.ELEVATOR_AT_LOBBY);
                 System.out.println(Constants.ELEVATOR_AT_LOBBY);
@@ -80,7 +81,7 @@ public class Elevator {
 
     public void exit(Person person, int floor){
         jobIndex += 1;
-        if(jobIndex == maxOccupants){
+        if(jobIndex == maxOccupants){ // remove jobs batch completed by the elevator
             for(int i = 0; i < maxOccupants; i++){
                 jobs.remove(0);
             }
