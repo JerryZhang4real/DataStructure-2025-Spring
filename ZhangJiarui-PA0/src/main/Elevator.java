@@ -31,6 +31,10 @@ public class Elevator {
         jobs.add(newJob);
     }
 
+    public MyArray<Job> getJobsArray(){
+        return this.jobs;
+    }
+
     public void processAllJobs(){
         for(int i = 0; i < jobs.size(); i++){
             processJob(jobs.get(i));

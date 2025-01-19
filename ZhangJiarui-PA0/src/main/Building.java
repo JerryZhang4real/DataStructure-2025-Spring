@@ -18,7 +18,10 @@ public class Building {
     private Elevator elevator;
 
     public Building(int numFloors){
-        this.floorArr = new Floor[numFloors];
+        this.floorArr = new Floor[numFloors+1];
+        for(int i = 0; i < numFloors+1; i++){
+            floorArr[i] = new Floor();
+        }
         this.elevator = new Elevator();
     }
 
@@ -26,8 +29,16 @@ public class Building {
         return this.floorArr.length;
     }
 
+    public Elevator getElevator(){
+        return this.elevator;
+    }
+
+    public Floor[] getFloors(){
+        return this.floorArr;
+    }
+
     public boolean enterElevatorRequest(Person person, int floor){
-        if(floor <= this.getMaxFloorNum() || floor >= 1){
+        if(floor <= this.getMaxFloorNum() && floor >= 1){
             elevator.createJob(person, floor);
             return true;
         }
@@ -36,11 +47,14 @@ public class Building {
     }
 
     public void startElevator(){
+        for(int i = 0; i < elevator.getJobsArray().size(); i++){
+            enterFloor(elevator.getJobsArray().get(i).getPerson(), elevator.getJobsArray().get(i).getToFloor());
+        }
         elevator.processAllJobs();
     }
 
     public void enterFloor(Person person, int floor){
-        floorArr[floor].peopleAtFloor.add(person);
+        floorArr[floor].enterFloor(person);;
     }
 
     public String toString(){

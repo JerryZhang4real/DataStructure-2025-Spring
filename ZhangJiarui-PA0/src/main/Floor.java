@@ -23,6 +23,15 @@ public class Floor{
     }
 
     public String toString(){
-        return peopleAtFloor.toString();
+        String peopleAtFloor2String = "";
+        for(int i = 0; i < peopleAtFloor.size()-1; i++){
+            peopleAtFloor2String += peopleAtFloor.get(i).getName() + ", ";
+        }
+        peopleAtFloor2String += peopleAtFloor.get(peopleAtFloor.size()-1).getName();
+
+        if(peopleAtFloor.size() == 0){
+            peopleAtFloor2String += "No one at this floor now";
+        }
+        return peopleAtFloor2String;
     }
 }

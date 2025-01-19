@@ -34,6 +34,10 @@ public class Person {
         return false;
     }
 
+    public String getName(){
+        return this.firstName + " " + this.lastName;
+    }
+
     public int getToFloor(){
         return this.toFloor;
     }
