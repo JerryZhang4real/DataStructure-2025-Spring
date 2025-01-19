@@ -26,7 +26,7 @@ public class Building {
     }
 
     public int getMaxFloorNum(){
-        return this.floorArr.length;
+        return this.floorArr.length-1;
     }
 
     public Elevator getElevator(){

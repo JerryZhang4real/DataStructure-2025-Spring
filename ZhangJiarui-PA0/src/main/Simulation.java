@@ -32,5 +32,10 @@ public class Simulation {
         building.enterElevatorRequest(p4, 2);
         
         building.startElevator();
+
+        // for(int i = 1; i <= building.getMaxFloorNum(); i++){
+        //     System.out.println(building.getFloors()[i].toString());
+        // }
+
     }
 }

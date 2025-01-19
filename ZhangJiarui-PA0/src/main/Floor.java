@@ -24,13 +24,15 @@ public class Floor{
 
     public String toString(){
         String peopleAtFloor2String = "";
-        for(int i = 0; i < peopleAtFloor.size()-1; i++){
-            peopleAtFloor2String += peopleAtFloor.get(i).getName() + ", ";
-        }
-        peopleAtFloor2String += peopleAtFloor.get(peopleAtFloor.size()-1).getName();
 
         if(peopleAtFloor.size() == 0){
             peopleAtFloor2String += "No one at this floor now";
+        }else{
+            for(int i = 0; i < peopleAtFloor.size()-1; i++){
+                peopleAtFloor2String += peopleAtFloor.get(i).getName() + ", ";
+            }
+            peopleAtFloor2String += peopleAtFloor.get(peopleAtFloor.size()-1).getName();
+    
         }
         return peopleAtFloor2String;
     }
