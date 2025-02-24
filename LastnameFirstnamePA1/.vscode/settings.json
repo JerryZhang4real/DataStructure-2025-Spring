@@ -1,0 +1,9 @@
+{
+    "java.debug.settings.console": "internalConsole",
+    "java.project.sourcePaths": [
+        "src"
+    ],
+    "java.project.referencedLibraries": [
+        "d:\\COSI29\\ZhangJiarui-PA0\\test-lib\\junit-platform-console-standalone-1.11.0.jar"
+    ]
+}
